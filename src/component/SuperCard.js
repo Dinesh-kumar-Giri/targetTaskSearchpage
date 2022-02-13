@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import axios from 'axios';
+import Testing from './Testing';
 // import BuyCard from './BuyCard';
 
 
@@ -36,6 +37,7 @@ function SuperCard() {
     
 
       </div>
+      <Testing/>
     </div>
   );
 }
