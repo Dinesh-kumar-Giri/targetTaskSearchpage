@@ -25,7 +25,15 @@ function SuperCard() {
         {products.map((product) => {
           return (
             <div className="col-md-4 my-2  ">
+<<<<<<< HEAD
               <Card product={product} />
+=======
+              <Card
+                title={element.title.slice(0, 18)}
+                // ImageDescrition={element.description.slice(0, 65)}
+                ImageUrl={element.image}
+              />
+>>>>>>> 892d64f56114ab2ee14cfc75792ae02489f073d1
                 
             </div>
             
