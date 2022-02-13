@@ -62,7 +62,7 @@ function Navbar() {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-outline-success" type="submit" style={{color: 'azure'}} >
+            <button className="btn btn-outline-success" type="submit" style={{color: 'white'}} >
               Search
             </button>
           </form>

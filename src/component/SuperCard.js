@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import axios from 'axios';
+import BuyCard from './BuyCard';
 
 
 function SuperCard() {
@@ -14,6 +15,7 @@ function SuperCard() {
       const data = res.data;
        console.log(data)
        setInformation(data)
+
     })
     
   }, []);
@@ -24,15 +26,19 @@ function SuperCard() {
         {Information.map((element) => {
           console.log(element);
           return (
-            <div className="col-md-4">
+            <div className="col-md-4 my-2  ">
               <Card
                 title={element.title.slice(0, 10)}
-                ImageDescrition={element.description.slice(0, 65)}
+                // ImageDescrition={element.description.slice(0, 65)}
                 ImageUrl={element.image}
               />
+                
             </div>
+            
           );
         })}
+    
+
       </div>
     </div>
   );
