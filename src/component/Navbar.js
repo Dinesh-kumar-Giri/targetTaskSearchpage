@@ -5,7 +5,7 @@ function Navbar() {
     <div>
     <nav className="navbar    navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a className="navbar-brand" href="#">
           <img src={require('../assect/logo.jpeg')} alt="" width="30" height="24"/>
           </a>
           <button
