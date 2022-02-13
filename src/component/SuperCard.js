@@ -22,6 +22,7 @@ function SuperCard() {
 
   return (
     <div className="container my-3 ">
+       <Testing/>
       <div className="row">
         {products.map((product) => {
           return (
@@ -37,7 +38,7 @@ function SuperCard() {
     
 
       </div>
-      <Testing/>
+     
     </div>
   );
 }
