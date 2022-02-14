@@ -5,9 +5,9 @@ import Testing from './Testing';
 // import BuyCard from './BuyCard';
 
 
-function SuperCard() {
+function SuperCard({products,setProducts}) {
   console.log('SuperCard');
-  const [products, setProducts] = useState([]);
+  
 
   useEffect( () => {
     console.log('api data before');

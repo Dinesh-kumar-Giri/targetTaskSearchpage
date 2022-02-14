@@ -1,6 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
 
-function Navbar() {
+function Navbar({setProducts}) {
+
+const [fileterKeyword,setFilterKeyword]=useState()
+
+const findData=(e)=>{
+  e.preventDefault();
+    console.log('seeeee',fileterKeyword)
+
+
+    // call api here  of filter--------------
+
+
+
+}
+
   return (
     <div>
     <nav className="navbar    navbar-expand-lg navbar-dark bg-dark">
@@ -61,8 +75,9 @@ function Navbar() {
               type="search"
               placeholder="Search"
               aria-label="Search"
+              onChange={(e)=>setFilterKeyword(e.target.value)}
             />
-            <button className="btn btn-outline-success" type="submit" style={{color: 'white'}} >
+            <button className="btn btn-outline-success" type="submit" style={{color: 'white'}} onClick={findData} >
               Search
             </button>
           </form>
