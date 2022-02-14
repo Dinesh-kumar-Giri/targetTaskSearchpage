@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom';
 function Card({product}) {
   const navigate = useNavigate();
   console.log('Card.js')
-  const { description,image, title, } = product || {};
+  const { description,image, title,id } = product || {};
 
   const handleClick = () => {
-    navigate('/product/'+image);
+    navigate('/getsingleitem/'+id);
   }
 
   return (

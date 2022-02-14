@@ -10,7 +10,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<SuperCard />} />
-          <Route path="/product/:id" element={<BuyCard />} />
+          <Route path="/getsingleitem/:id" element={<BuyCard />} />
         </Routes>
       </Router>
     </>

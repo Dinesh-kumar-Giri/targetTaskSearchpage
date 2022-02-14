@@ -6,15 +6,17 @@ const BuyCard = (props) => {
   const { id } = useParams();
   const [product, setProduct] = useState();
   useEffect(()=>{
-    axios.get(`http://localhost:5000/getProduct/`+id)
+    axios.post(`http://localhost:5000/getsingleitem`,null,{ params: {
+      id,
+    }})
     .then(res => {
-       console.log('ddddd',res.data);
-       setProduct(res.data);
+       console.log('ddddd',res.data.Item);
+       setProduct(res.data.Item);
 
     })
-  }, [id]);
-  const {title, description, price, image} = product || {};
-  console.log(title, description, price, image);
+  }, []);
+  const {title, decription, price, image} = product || {};
+  console.log(title, decription, price, image);
 
   console.log('PARAMS, id', id);
   return (
@@ -23,7 +25,7 @@ const BuyCard = (props) => {
         <div className="col-md-4">
           <div className="card  " style={{ width: '18rem' }}>
             <img
-              src={image}
+              src={'http://localhost:5000/'+image}
               className="card-img-top"
               alt="..."
             />
@@ -32,7 +34,7 @@ const BuyCard = (props) => {
         <div className="col-md-4">
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
-            <p className="card-text">{description}</p>
+            <p className="card-text">{decription}</p>
             <hr />
 
             <p className="card-text">
