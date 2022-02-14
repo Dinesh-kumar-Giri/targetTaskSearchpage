@@ -3,14 +3,14 @@ import axios from 'axios'
 
 function Testing() {
   const [selectedFile,setSelectedFile]=useState(null)
-
-  const userId = JSON.parse(localStorage.getItem('LogInUser'))._id
   const [postData, setpostData] = useState({
-    image: '',
     title: '',
     decription: '',
-    price: userId,
+    price: '',
   })
+
+  const userId = JSON.parse(localStorage.getItem('LogInUser'))._id
+ 
   const handle = (e) => {
     setpostData({ ...postData, [e.target.name]: e.target.value })
   }
@@ -24,31 +24,20 @@ const submitPost=(e)=>{
   console.log('e.target-----',selectedFile)
 
   let formData = new FormData()
-  formData.append('name','dssd')
+  formData.append('title',postData.title)
+  formData.append('decription',postData.decription)
+  formData.append('price',postData.price)
+
   formData.append('file',selectedFile)
   console.log('formdata type------------------')
 
   axios({
     method: 'POST',
     data: formData,
-    // withCredentials: true,
     url: `http://localhost:5000/UploadPostContent`,
-    // config: { headers: { 'Content-Type': 'multipart/form-data' } },
   }).then((res) => {
-    // if (res.data.status) {
-    //     alert(res.data.message)
-    // } else {
-    //   console.log('not aded')
-    // }
     console.log(res)
   })
-  // axios
-  //   .post(`http://localhost:5000/UploadPostContent`, formData)
-  //   .then((res) => {
-  //     alert("File Upload success");
-  //   })
-  //   .catch((err) => alert(err,"File Upload Error"));
-
 }
 
   return (

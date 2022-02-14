@@ -5,19 +5,19 @@ import { useNavigate } from 'react-router-dom';
 function Card({product}) {
   const navigate = useNavigate();
   console.log('Card.js')
-  const { id, title, image, description } = product || {};
+  const { description,image, title, } = product || {};
 
   const handleClick = () => {
-    navigate('/product/'+id);
+    navigate('/product/'+image);
   }
 
   return (
     <div onClick={handleClick}>
       <div className="card" style={{ width: '15rem' }}>
-        <img src={image} className="card-img-top" alt="..." style={{height: '282px'}} />
+        <img src={'http://localhost:5000/'+image} className="card-img-top" alt="..." style={{height: '282px'}} />
         <div className="card-body">
-          <h5 className="card-title">{title.slice(0, 19)}</h5>
-          <p className="card-text">{description.slice(0, 45)}</p>
+          <h5 className="card-title">{title}</h5>
+          <p className="card-text">{description}</p>
           <button href="#" className="btn btn-sm btn-dark">
            🤍 WISHLIST 
           </button>

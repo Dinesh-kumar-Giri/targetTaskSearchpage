@@ -11,9 +11,9 @@ function SuperCard() {
 
   useEffect( () => {
     console.log('api data before');
-    axios.get(`https://fakestoreapi.com/products`)
+    axios.get(`http://localhost:5000/getProduct`)
     .then(res => {
-       console.log(res.data);
+       console.log('coming----',res.data);
        setProducts(res.data);
 
     })

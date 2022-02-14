@@ -6,9 +6,9 @@ const BuyCard = (props) => {
   const { id } = useParams();
   const [product, setProduct] = useState();
   useEffect(()=>{
-    axios.get(`https://fakestoreapi.com/products/`+id)
+    axios.get(`http://localhost:5000/getProduct/`+id)
     .then(res => {
-       console.log(res.data);
+       console.log('ddddd',res.data);
        setProduct(res.data);
 
     })
