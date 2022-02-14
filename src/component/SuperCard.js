@@ -10,12 +10,10 @@ function SuperCard({products,setProducts}) {
   
 
   useEffect( () => {
-    console.log('api data before');
     axios.get(`http://localhost:5000/getProduct`)
     .then(res => {
        console.log('coming----',res.data);
        setProducts(res.data);
-
     })
     
   }, []);

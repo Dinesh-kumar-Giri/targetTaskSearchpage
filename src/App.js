@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
       <Router>
-        <Navbar setProducts={setProducts}/>
+        <Navbar products={products} setProducts={setProducts}/>
         <Routes>
           <Route path="/" element={<SuperCard products={products} setProducts={setProducts} />} />
           <Route path="/getsingleitem/:id" element={<BuyCard />} />
