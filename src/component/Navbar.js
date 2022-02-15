@@ -6,8 +6,8 @@ function Navbar({ products, setProducts }) {
   const findData = (e) => {
     e.preventDefault();
     console.log('seeeee', fileterKeyword);
-
-    const newProduct = products.filter((item) => item.title === fileterKeyword);
+     
+    const newProduct = products.filter((item) => item.title?.toLowerCase()?.includes(fileterKeyword.toLowerCase()));
     setProducts(newProduct);
     console.log('new pro', newProduct);
   };
