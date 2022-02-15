@@ -14,7 +14,7 @@ function Card({product}) {
   return (
     <div onClick={handleClick}>
       <div className="card" style={{ width: '15rem' }}>
-        <img src={'http://localhost:5000/'+image} className="card-img-top" alt="..." style={{height: '282px'}} />
+        <img src={image} className="card-img-top" alt="..." style={{height: '282px'}} />
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
           <p className="card-text">{description}</p>

@@ -25,7 +25,7 @@ const BuyCard = (props) => {
         <div className="col-md-4">
           <div className="card  " style={{ width: '18rem' }}>
             <img
-              src={'http://localhost:5000/'+image}
+              src={image}
               className="card-img-top"
               alt="..."
             />
