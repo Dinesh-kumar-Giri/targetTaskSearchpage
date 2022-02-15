@@ -20,7 +20,7 @@ function SuperCard({products,setProducts}) {
 
   return (
     <div className="container my-3 ">
-       <Testing/>
+       {/* <Testing/> */}
       <div className="row">
         {products.map((product) => {
           return (
