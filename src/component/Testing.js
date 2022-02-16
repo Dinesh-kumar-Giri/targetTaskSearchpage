@@ -9,7 +9,7 @@ function Testing() {
     price: '',
   })
 
-  const userId = JSON.parse(localStorage.getItem('LogInUser'))._id
+  
  
   const handle = (e) => {
     setpostData({ ...postData, [e.target.name]: e.target.value })
@@ -41,25 +41,7 @@ const submitPost=(e)=>{
 
 
 
-  // axios({
-  //   method: 'POST',
-  //   headers: {
-  //     "Content-Type": "multipart/form-data"
-  //   },
-  //   data: selectedFile,
-  //   url: `https://productimage12.s3.ap-south-1.amazonaws.com/ss?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2HFJ2UPFZA4I7KDO%2F20220215%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20220215T064318Z&X-Amz-Expires=600&X-Amz-Signature=3f743e68c9fe8da2e50f98def999dd6fb74477a28818da1d1a3117a3b2ef0752&X-Amz-SignedHeaders=host`,
-  // }).then((res) => {
-  //   console.log(res)
-  // }).catch((err)=>{
-  //   console.log(err)
-  // })
-  //  fetch(`https://productimage12.s3.ap-south-1.amazonas.com/file-name.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2HFJ2UPFSZ7X7WF5%2F20220215%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20220215T051217Z&X-Amz-Expires=300&X-Amz-Signature=4cc40ff29b3576e2e53a319e2ed6455825721999cc82bd645f5cc7064532f67e&X-Amz-SignedHeaders=hos`, {
-  //   method: "PUT",
-  //   headers: {
-  //     "Content-Type": "multipart/form-data"
-  //   },
-  //   body:selectedFile
-  // })
+  
 
 }
 

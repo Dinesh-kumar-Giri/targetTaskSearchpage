@@ -20,11 +20,12 @@ function SuperCard({products,setProducts}) {
 
   return (
     <div className="container my-3 ">
-       <Testing/>
+       {/* <Testing/> */}
       <div className="row">
-        {products.map((product) => {
+        {products.length>0?
+        products.map((product) => {
           return (
-            <div className="col-md-4 my-2  ">
+            < div className="col-md-4 my-2  ">
               <Card
                  product={product}
               />
@@ -32,7 +33,7 @@ function SuperCard({products,setProducts}) {
             </div>
             
           );
-        })}
+        }): <div>Sorry this Product is not available :)  </div> }
     
 
       </div>
